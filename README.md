@@ -34,7 +34,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/E-eclipse/portfolio.git
+git clone https://github.com/E-eclipse/SiteSourceCode.git
 ```
 
 2. Откройте `index.html` в вашем браузере
