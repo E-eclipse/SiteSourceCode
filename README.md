@@ -11,12 +11,14 @@
 - Таймлайн проектов с анимированными точками
 - Градиентные эффекты и современные визуальные элементы
 - Анимированный текст с эффектом печатающейся машинки
+- Кастомный favicon с изображением солнечного затмения
 
 ## 🛠 Технологии
 
 - HTML5
 - CSS3 (с использованием современных возможностей)
 - JavaScript (ES6+)
+- SVG для создания favicon
 - Библиотеки:
   - AOS (Animate On Scroll)
   - Particles.js
@@ -27,6 +29,8 @@
 ├── index.html         # Основной HTML файл
 ├── styles.css         # CSS стили
 ├── script.js          # JavaScript код
+├── favicon.png        # Иконка сайта
+├── favicon.svg        # Исходный SVG файл иконки
 └── README.md         # Документация проекта
 ```
 
@@ -34,7 +38,7 @@
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/E-eclipse/SiteSourceCode.git
+git clone https://github.com/E-eclipse/portfolio.git
 ```
 
 2. Откройте `index.html` в вашем браузере
