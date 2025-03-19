@@ -87,7 +87,7 @@ const initTextAnimation = () => {
     
     const textElement = document.querySelector('.typing-text');
     let currentPhraseIndex = 0;
-    
+
     const updateText = () => {
         textElement.style.opacity = '0';
         setTimeout(() => {
