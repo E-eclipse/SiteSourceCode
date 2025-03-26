@@ -11,6 +11,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div class="language-switcher">
+        <input type="checkbox" id="language-toggle">
+        <label for="language-toggle">
+            <div class="toggle-container">
+                <div class="toggle-track">
+                    <div class="toggle-thumb">
+                        <div class="thumb-circle"></div>
+                    </div>
+                </div>
+                <div class="toggle-text">
+                    <span class="lang-text">RU</span>
+                </div>
+            </div>
+        </label>
+    </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -200,6 +215,50 @@
         </section>
     </div>
 
+    <script>
+        const translations = {
+            ru: {
+                skills: "Навыки",
+                about: "Обо мне",
+                projects: "Проекты",
+                python: "Python",
+                pythonDesc: "Разработка высокопроизводительных приложений и систем машинного обучения",
+                ml: "Machine Learning",
+                mlDesc: "Создание и оптимизация моделей машинного обучения",
+                cv: "Computer Vision",
+                cvDesc: "Разработка систем компьютерного зрения и обработки изображений",
+                dataAnalysis: "Data Analysis",
+                dataAnalysisDesc: "Анализ данных и визуализация результатов",
+                aboutTitle: "Data Scientist | ML Engineer | Computer Vision",
+                aboutDesc: "Амбициозный и творческий специалист в области Data Science с опытом разработки инновационных проектов на основе компьютерного зрения и машинного обучения.",
+                parkingSystem: "Система автоматизации парковки",
+                parkingDesc: "Разработка системы на Python для определения количества свободных мест и их расположения, использующая компьютерное зрение и машинное обучение.",
+                faceSystem: "Система распознавания лиц",
+                faceDesc: "Разработка нейронной сети для распознавания лиц на Python, аналогичной FaceID, с возможностью интеграции в настольные приложения.",
+                moreDetails: "Подробнее"
+            },
+            en: {
+                skills: "Skills",
+                about: "About",
+                projects: "Projects",
+                python: "Python",
+                pythonDesc: "Development of high-performance applications and machine learning systems",
+                ml: "Machine Learning",
+                mlDesc: "Creating and optimizing machine learning models",
+                cv: "Computer Vision",
+                cvDesc: "Development of computer vision systems and image processing",
+                dataAnalysis: "Data Analysis",
+                dataAnalysisDesc: "Data analysis and results visualization",
+                aboutTitle: "Data Scientist | ML Engineer | Computer Vision",
+                aboutDesc: "Ambitious and creative Data Science specialist with experience in developing innovative projects based on computer vision and machine learning.",
+                parkingSystem: "Parking Automation System",
+                parkingDesc: "Development of a Python system for determining the number and location of available parking spaces using computer vision and machine learning.",
+                faceSystem: "Face Recognition System",
+                faceDesc: "Development of a neural network for face recognition in Python, similar to FaceID, with the ability to integrate into desktop applications.",
+                moreDetails: "More Details"
+            }
+        };
+    </script>
     <script src="script.js"></script>
 </body>
 </html> 
