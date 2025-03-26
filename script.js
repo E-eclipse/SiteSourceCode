@@ -207,4 +207,71 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+// Language switcher functionality
+let currentLang = 'ru';
+
+function updateLanguage() {
+    const langText = document.querySelector('.lang-text');
+    langText.textContent = currentLang.toUpperCase();
+    
+    // Update all translatable elements
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles[0].textContent = translations[currentLang].skills;
+    sectionTitles[1].textContent = translations[currentLang].about;
+    sectionTitles[2].textContent = translations[currentLang].projects;
+    
+    // Update skill cards
+    const skillCards = document.querySelectorAll('.skill-card');
+    skillCards[0].querySelector('.skill-title').textContent = translations[currentLang].python;
+    skillCards[0].querySelector('.skill-description').textContent = translations[currentLang].pythonDesc;
+    skillCards[1].querySelector('.skill-title').textContent = translations[currentLang].ml;
+    skillCards[1].querySelector('.skill-description').textContent = translations[currentLang].mlDesc;
+    skillCards[2].querySelector('.skill-title').textContent = translations[currentLang].cv;
+    skillCards[2].querySelector('.skill-description').textContent = translations[currentLang].cvDesc;
+    skillCards[3].querySelector('.skill-title').textContent = translations[currentLang].dataAnalysis;
+    skillCards[3].querySelector('.skill-description').textContent = translations[currentLang].dataAnalysisDesc;
+    
+    // Update about section
+    const glowText = document.querySelector('.glow-text');
+    const aboutDesc = document.querySelector('.about-description p');
+    if (glowText) glowText.textContent = translations[currentLang].aboutTitle;
+    if (aboutDesc) aboutDesc.textContent = translations[currentLang].aboutDesc;
+    
+    // Update projects
+    const projectTitles = document.querySelectorAll('.timeline-content h3');
+    const projectDescs = document.querySelectorAll('.project-description p');
+    const moreDetailsBtns = document.querySelectorAll('.project-details-btn');
+    
+    if (projectTitles[0]) projectTitles[0].textContent = translations[currentLang].parkingSystem;
+    if (projectTitles[1]) projectTitles[1].textContent = translations[currentLang].faceSystem;
+    if (projectDescs[0]) projectDescs[0].textContent = translations[currentLang].parkingDesc;
+    if (projectDescs[1]) projectDescs[1].textContent = translations[currentLang].faceDesc;
+    
+    moreDetailsBtns.forEach(btn => {
+        if (btn) btn.textContent = translations[currentLang].moreDetails + ' ▼';
+    });
+    
+    // Update document language
+    document.documentElement.lang = currentLang;
+}
+
+// Инициализация переключателя языка
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('language-toggle');
+    const langText = document.querySelector('.lang-text');
+    
+    // Устанавливаем начальное состояние
+    currentLang = 'ru';
+    document.documentElement.lang = 'ru';
+    langText.textContent = 'RU';
+    
+    // Обработчик изменения языка
+    languageToggle.addEventListener('change', function() {
+        currentLang = this.checked ? 'en' : 'ru';
+        document.documentElement.lang = currentLang;
+        langText.textContent = currentLang.toUpperCase();
+        updateLanguage();
+    });
 }); 
