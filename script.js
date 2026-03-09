@@ -1,10 +1,10 @@
-// Инициализация AOS
+// Initialize AOS
 AOS.init({
     duration: 1000,
     once: true
 });
 
-// Настройка particles.js
+// Configure particles.js
 particlesJS('particles-js', {
     particles: {
         number: {
@@ -77,14 +77,13 @@ particlesJS('particles-js', {
     retina_detect: true
 });
 
-// Заменяем старую функцию typeText на более плавную анимацию
 const initTextAnimation = () => {
     const phrases = [
-        "Data Scientist",
-        "ML Engineer",
-        "Computer Vision"
+        'Data Scientist',
+        'ML Engineer',
+        'Computer Vision'
     ];
-    
+
     const textElement = document.querySelector('.typing-text');
     let currentPhraseIndex = 0;
 
@@ -101,7 +100,6 @@ const initTextAnimation = () => {
     setInterval(updateText, 3000);
 };
 
-// Анимация прогресс-баров навыков
 const animateSkills = () => {
     const skills = document.querySelectorAll('.skill-progress');
     skills.forEach(skill => {
@@ -118,32 +116,29 @@ const animateSkills = () => {
     });
 };
 
-// Обновляем инициализацию
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         const loader = document.querySelector('.eclipse-loader');
         const content = document.querySelector('.content-wrapper');
-        
-        // Добавляем эффект размытия при исчезновении
+
         loader.style.transition = 'all 1s ease';
         loader.style.filter = 'blur(50px)';
         loader.style.opacity = '0';
-        
-        // Показываем контент с эффектом появления
+
         content.style.opacity = '0';
         content.style.display = 'block';
-        
+
         setTimeout(() => {
             content.style.transition = 'opacity 1.5s ease';
             content.style.opacity = '1';
             loader.style.display = 'none';
         }, 1000);
-    }, 4000); // Увеличиваем время показа анимации
+    }, 4000);
+
     initTextAnimation();
     animateSkills();
 });
 
-// Плавная прокрутка
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -153,26 +148,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Добавляем новую функцию для отслеживания направления прокрутки
 let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const scrollDirection = scrollTop > lastScrollTop ? 'down' : 'up';
-    
-    // Находим все элементы, которые нужно анимировать
     const elements = document.querySelectorAll('.animate-on-scroll');
-    
+
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const elementBottom = element.getBoundingClientRect().bottom;
         const windowHeight = window.innerHeight;
-        
-        // Элемент входит в область видимости
+
         if (elementTop < windowHeight - 100 && elementBottom > 0) {
             element.classList.add('animate');
-            
-            // Добавляем специальные классы в зависимости от направления прокрутки
+
             if (scrollDirection === 'up') {
                 element.classList.add('scroll-up');
             } else {
@@ -182,24 +172,22 @@ window.addEventListener('scroll', () => {
             element.classList.remove('animate', 'scroll-up', 'scroll-down');
         }
     });
-    
+
     lastScrollTop = scrollTop;
 });
 
-// Добавляем обработчик для кнопок "Подробнее"
 document.addEventListener('DOMContentLoaded', function() {
     const detailsBtns = document.querySelectorAll('.project-details-btn');
-    
+
     detailsBtns.forEach(btn => {
         btn.addEventListener('click', function() {
             const description = this.nextElementSibling;
             const isActive = description.classList.contains('active');
-            
-            // Переключаем активное состояние
+
             description.classList.toggle('active');
             this.classList.toggle('active');
-            
-            // Плавная анимация
+            this.setAttribute('aria-expanded', String(!isActive));
+
             if (isActive) {
                 description.style.height = '0';
             } else {
@@ -209,69 +197,103 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Language switcher functionality
 let currentLang = 'ru';
 
 function updateLanguage() {
     const langText = document.querySelector('.lang-text');
     langText.textContent = currentLang.toUpperCase();
-    
-    // Update all translatable elements
-    const sectionTitles = document.querySelectorAll('.section-title');
-    sectionTitles[0].textContent = translations[currentLang].skills;
-    sectionTitles[1].textContent = translations[currentLang].about;
-    sectionTitles[2].textContent = translations[currentLang].projects;
-    
-    // Update skill cards
+
+    const skillsTitle = document.querySelector('.skills-section .section-title');
+    const aboutTitle = document.querySelector('.about-section .section-title');
+    const projectsTitle = document.querySelector('.projects-section .section-title');
+
+    if (skillsTitle) skillsTitle.textContent = translations[currentLang].skills;
+    if (aboutTitle) aboutTitle.textContent = translations[currentLang].about;
+    if (projectsTitle) projectsTitle.textContent = translations[currentLang].projects;
+
     const skillCards = document.querySelectorAll('.skill-card');
-    skillCards[0].querySelector('.skill-title').textContent = translations[currentLang].python;
-    skillCards[0].querySelector('.skill-description').textContent = translations[currentLang].pythonDesc;
-    skillCards[1].querySelector('.skill-title').textContent = translations[currentLang].ml;
-    skillCards[1].querySelector('.skill-description').textContent = translations[currentLang].mlDesc;
-    skillCards[2].querySelector('.skill-title').textContent = translations[currentLang].cv;
-    skillCards[2].querySelector('.skill-description').textContent = translations[currentLang].cvDesc;
-    skillCards[3].querySelector('.skill-title').textContent = translations[currentLang].dataAnalysis;
-    skillCards[3].querySelector('.skill-description').textContent = translations[currentLang].dataAnalysisDesc;
-    
-    // Update about section
+    if (skillCards[0]) {
+        skillCards[0].querySelector('.skill-title').textContent = translations[currentLang].python;
+        skillCards[0].querySelector('.skill-description').textContent = translations[currentLang].pythonDesc;
+    }
+    if (skillCards[1]) {
+        skillCards[1].querySelector('.skill-title').textContent = translations[currentLang].ml;
+        skillCards[1].querySelector('.skill-description').textContent = translations[currentLang].mlDesc;
+    }
+    if (skillCards[2]) {
+        skillCards[2].querySelector('.skill-title').textContent = translations[currentLang].cv;
+        skillCards[2].querySelector('.skill-description').textContent = translations[currentLang].cvDesc;
+    }
+    if (skillCards[3]) {
+        skillCards[3].querySelector('.skill-title').textContent = translations[currentLang].dataAnalysis;
+        skillCards[3].querySelector('.skill-description').textContent = translations[currentLang].dataAnalysisDesc;
+    }
+
     const glowText = document.querySelector('.glow-text');
     const aboutDesc = document.querySelector('.about-description p');
     if (glowText) glowText.textContent = translations[currentLang].aboutTitle;
     if (aboutDesc) aboutDesc.textContent = translations[currentLang].aboutDesc;
-    
-    // Update projects
-    const projectTitles = document.querySelectorAll('.timeline-content h3');
-    const projectDescs = document.querySelectorAll('.project-description p');
-    const moreDetailsBtns = document.querySelectorAll('.project-details-btn');
-    
+
+    const experienceCards = document.querySelectorAll('.experience-card');
+    if (experienceCards[0]) {
+        const title = experienceCards[0].querySelector('h3');
+        const company = experienceCards[0].querySelector('.experience-company');
+        const desc = experienceCards[0].querySelector('.experience-description');
+
+        if (title) title.textContent = translations[currentLang].freelanceRole;
+        if (company) company.textContent = translations[currentLang].freelanceCompany;
+        if (desc) desc.textContent = translations[currentLang].freelanceDesc;
+    }
+
+    if (experienceCards[1]) {
+        const title = experienceCards[1].querySelector('h3');
+        const company = experienceCards[1].querySelector('.experience-company');
+        const desc = experienceCards[1].querySelector('.experience-description');
+
+        if (title) title.textContent = translations[currentLang].monitoringRole;
+        if (company) company.textContent = translations[currentLang].monitoringCompany;
+        if (desc) desc.textContent = translations[currentLang].monitoringRoleDesc;
+    }
+
+    const projectTitles = document.querySelectorAll('.projects-section .timeline-content h3');
+    const projectDescs = document.querySelectorAll('.projects-section .project-description p');
+    const moreDetailsBtns = document.querySelectorAll('.projects-section .project-details-btn');
+
     if (projectTitles[0]) projectTitles[0].textContent = translations[currentLang].parkingSystem;
     if (projectTitles[1]) projectTitles[1].textContent = translations[currentLang].faceSystem;
+    if (projectTitles[2]) projectTitles[2].textContent = translations[currentLang].monitoringSystem;
+    if (projectTitles[3]) projectTitles[3].textContent = translations[currentLang].myMptSystem;
+    if (projectTitles[4]) projectTitles[4].textContent = translations[currentLang].gadukaGangSystem;
+    if (projectTitles[5]) projectTitles[5].textContent = translations[currentLang].autoCollectBotSystem;
+    if (projectTitles[6]) projectTitles[6].textContent = translations[currentLang].tooLearnSystem;
+
     if (projectDescs[0]) projectDescs[0].textContent = translations[currentLang].parkingDesc;
     if (projectDescs[1]) projectDescs[1].textContent = translations[currentLang].faceDesc;
-    
+    if (projectDescs[2]) projectDescs[2].textContent = translations[currentLang].monitoringDesc;
+    if (projectDescs[3]) projectDescs[3].textContent = translations[currentLang].myMptDesc;
+    if (projectDescs[4]) projectDescs[4].textContent = translations[currentLang].gadukaGangDesc;
+    if (projectDescs[5]) projectDescs[5].textContent = translations[currentLang].autoCollectBotDesc;
+    if (projectDescs[6]) projectDescs[6].textContent = translations[currentLang].tooLearnDesc;
+
     moreDetailsBtns.forEach(btn => {
-        if (btn) btn.textContent = translations[currentLang].moreDetails + ' ▼';
+        btn.innerHTML = translations[currentLang].moreDetails + ' <span class="arrow">&#9660;</span>';
     });
-    
-    // Update document language
+
     document.documentElement.lang = currentLang;
 }
 
-// Инициализация переключателя языка
 document.addEventListener('DOMContentLoaded', function() {
     const languageToggle = document.getElementById('language-toggle');
     const langText = document.querySelector('.lang-text');
-    
-    // Устанавливаем начальное состояние
+
     currentLang = 'ru';
     document.documentElement.lang = 'ru';
     langText.textContent = 'RU';
-    
-    // Обработчик изменения языка
+
     languageToggle.addEventListener('change', function() {
         currentLang = this.checked ? 'en' : 'ru';
         document.documentElement.lang = currentLang;
         langText.textContent = currentLang.toUpperCase();
         updateLanguage();
     });
-}); 
+});
