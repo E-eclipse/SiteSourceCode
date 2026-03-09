@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Портфолио Python-разработчика с фокусом на ML, Computer Vision, backend-автоматизацию и наблюдаемость.">
     <title>E-eclipse | Портфолио</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
@@ -12,7 +13,7 @@
 </head>
 <body>
     <div class="language-switcher">
-        <input type="checkbox" id="language-toggle">
+        <input type="checkbox" id="language-toggle" aria-label="Language switcher">
         <label for="language-toggle">
             <div class="toggle-container">
                 <div class="toggle-track">
@@ -138,6 +139,7 @@
                         <span class="skill-tag">Data Visualization</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -146,10 +148,38 @@
             <div class="content-card animate-on-scroll">
                 <p class="glow-text">Data Scientist | ML Engineer | Computer Vision</p>
                 <div class="about-description">
-                    <p>Амбициозный и творческий специалист в области Data Science с опытом разработки инновационных проектов на основе компьютерного зрения и машинного обучения.</p>
+                    <p>Python-разработчик с сильным уклоном в ML, Computer Vision и прикладную аналитику. Умею доводить идеи до рабочего решения: от модели и логики обработки до API, базы данных, мониторинга и поддержки.</p>
                 </div>
             </div>
             <div class="experience-timeline" data-aos="fade-left">
+                <div class="content-card animate-on-scroll experience-card">
+                    <div class="timeline-date">2024 - now</div>
+                    <h3>Фриланс: ML / автоматизация / аналитика</h3>
+                    <p class="experience-company">Проектная разработка</p>
+                    <p class="experience-description">
+                        Разработка прикладных ML/CV-решений, внутренних инструментов, автоматизации и дашбордов под конкретные бизнес-задачи.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Docker</span>
+                        <span>Automation</span>
+                        <span>Dashboards</span>
+                    </div>
+                </div>
+                <div class="content-card animate-on-scroll experience-card">
+                    <div class="timeline-date">2023 - 2024</div>
+                    <h3>Инженер БД и мониторинга</h3>
+                    <p class="experience-company">ООО "Джилс"</p>
+                    <p class="experience-description">
+                        Работа с базами данных, REST-сервисами, метриками и оповещениями: от структуры хранения до дашбордов и контроля стабильности.
+                    </p>
+                    <div class="tech-stack">
+                        <span>PostgreSQL</span>
+                        <span>REST API</span>
+                        <span>InfluxDB</span>
+                        <span>Alerts</span>
+                    </div>
+                </div>
                 <!-- Здесь будет таймлайн проектов -->
             </div>
         </section>
@@ -168,7 +198,7 @@
                         </button>
                         
                         <div class="project-description">
-                            <p>Разработка системы на Python для определения количества свободных мест и их расположения, использующая компьютерное зрение и машинное обучение.</p>
+                            <p>Python-проект для определения свободных парковочных мест и их расположения. Здесь важны не только CV-алгоритмы, но и практическая польза: понятная логика детекции и наглядный результат.</p>
                             <div class="tech-stack">
                                 <span>Python</span>
                                 <span>OpenCV</span>
@@ -196,7 +226,7 @@
                         </button>
                         
                         <div class="project-description">
-                            <p>Разработка нейронной сети для распознавания лиц на Python, аналогичной FaceID, с возможностью интеграции в настольные приложения.</p>
+                            <p>Система распознавания лиц на Python с desktop-интерфейсом и локальной логикой авторизации. Проект показывает не только работу с CV, но и умение собрать законченное пользовательское решение.</p>
                             <div class="tech-stack">
                                 <span>Tkinter</span>
                                 <span>Neural Networks</span>
@@ -211,8 +241,128 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <h3>Мониторинг и дашборды</h3>
+                        <div class="timeline-date">2024 - 2025</div>
+
+                        <button class="project-details-btn" aria-expanded="false">
+                            Подробнее
+                            <span class="arrow">▼</span>
+                        </button>
+
+                        <div class="project-description">
+                            <p>Настройка метрик, дашбордов и алертов для сервисов: от сбора технических показателей до удобного контроля состояния системы.</p>
+                            <div class="tech-stack">
+                                <span>Grafana</span>
+                                <span>InfluxDB</span>
+                                <span>Alerting</span>
+                                <span>Monitoring</span>
+                            </div>
+                            <a href="https://github.com/E-eclipse?tab=repositories" class="github-project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <h3>MyMPT</h3>
+                        <div class="timeline-date">2025</div>
+
+                        <button class="project-details-btn" aria-expanded="false">
+                            Подробнее
+                            <span class="arrow">▼</span>
+                        </button>
+
+                        <div class="project-description">
+                            <p>Приложение расписания для студентов моего техникума, которое я разработал вместе с двумя товарищами для реального удобства окружающих. Сейчас его уже используют около 70% студентов, а отдельно мы тщательно проработали интерфейс и даже реализовали эффект liquid glass на iPhone.</p>
+                            <div class="tech-stack">
+                                <span>Team Development</span>
+                                <span>Product Logic</span>
+                                <span>GitHub</span>
+                            </div>
+                            <a href="https://github.com/AppMyMPT/MyMPT" class="github-project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <h3>GADUKA GANG</h3>
+                        <div class="timeline-date">2025</div>
+
+                        <button class="project-details-btn" aria-expanded="false">
+                            Подробнее
+                            <span class="arrow">▼</span>
+                        </button>
+
+                        <div class="project-description">
+                            <p>Форум для разработчиков на Python со встроенной системой курсов по программированию. Проект объединяет площадку для общения, обмена опытом и обучения в одном продукте.</p>
+                            <div class="tech-stack">
+                                <span>Independent Project</span>
+                                <span>GitHub</span>
+                                <span>Development</span>
+                            </div>
+                            <a href="https://github.com/E-eclipse/GADUKA-GANG" class="github-project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right animate-on-scroll">
+                    <div class="timeline-content">
+                        <h3>AutoCollectBot</h3>
+                        <div class="timeline-date">2025</div>
+
+                        <button class="project-details-btn" aria-expanded="false">
+                            Подробнее
+                            <span class="arrow">▼</span>
+                        </button>
+
+                        <div class="project-description">
+                            <p>Бот, который сканирует заданную область экрана и при появлении специального уведомления автоматически выполняет действия, заранее прописанные в программе. По сути это инструмент точечной автоматизации под конкретный сценарий.</p>
+                            <div class="tech-stack">
+                                <span>Automation</span>
+                                <span>Bot</span>
+                                <span>Data Collection</span>
+                            </div>
+                            <a href="https://github.com/E-eclipse/AutoCollectBot" class="github-project-link" target="_blank" rel="noopener noreferrer">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left animate-on-scroll">
+                    <div class="timeline-content">
+                        <h3>TooLearn</h3>
+                        <div class="timeline-date">2025</div>
+
+                        <button class="project-details-btn" aria-expanded="false">
+                            Подробнее
+                            <span class="arrow">▼</span>
+                        </button>
+
+                        <div class="project-description">
+                            <p>Android-приложение для изучения иностранных языков с фокусом на удобный пользовательский сценарий и регулярную практику.</p>
+                            <div class="tech-stack">
+                                <span>Android</span>
+                                <span>Mobile App</span>
+                                <span>Language Learning</span>
+                            </div>
+                            <span class="github-project-link">Private / no public repo</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
     </div>
 
     <script>
@@ -235,6 +385,22 @@
                 parkingDesc: "Разработка системы на Python для определения количества свободных мест и их расположения, использующая компьютерное зрение и машинное обучение.",
                 faceSystem: "Система распознавания лиц",
                 faceDesc: "Разработка нейронной сети для распознавания лиц на Python, аналогичной FaceID, с возможностью интеграции в настольные приложения.",
+                monitoringSystem: "Мониторинг и дашборды",
+                monitoringDesc: "Настройка метрик, дашбордов и алертов для сервисов: от сбора технических показателей до удобного контроля состояния системы.",
+                myMptSystem: "MyMPT",
+                myMptDesc: "Приложение расписания для студентов моего техникума, которое я разработал вместе с двумя товарищами для реального удобства окружающих. Сейчас его уже используют около 70% студентов, а отдельно мы тщательно проработали интерфейс и даже реализовали эффект liquid glass на iPhone.",
+                gadukaGangSystem: "GADUKA GANG",
+                gadukaGangDesc: "Форум для разработчиков на Python со встроенной системой курсов по программированию. Проект объединяет площадку для общения, обмена опытом и обучения в одном продукте.",
+                autoCollectBotSystem: "AutoCollectBot",
+                autoCollectBotDesc: "Бот, который сканирует заданную область экрана и при появлении специального уведомления автоматически выполняет действия, заранее прописанные в программе. По сути это инструмент точечной автоматизации под конкретный сценарий.",
+                tooLearnSystem: "TooLearn",
+                tooLearnDesc: "Android-приложение для изучения иностранных языков с фокусом на удобный пользовательский сценарий и регулярную практику.",
+                freelanceRole: "Фриланс: ML / автоматизация / аналитика",
+                freelanceCompany: "Проектная разработка",
+                freelanceDesc: "Разработка прикладных ML/CV-решений, внутренних инструментов, автоматизации и дашбордов под конкретные бизнес-задачи.",
+                monitoringRole: "Инженер БД и мониторинга",
+                monitoringCompany: "ООО \"Джилс\"",
+                monitoringRoleDesc: "Работа с базами данных, REST-сервисами, метриками и оповещениями: от структуры хранения до дашбордов и контроля стабильности.",
                 moreDetails: "Подробнее"
             },
             en: {
@@ -255,9 +421,31 @@
                 parkingDesc: "Development of a Python system for determining the number and location of available parking spaces using computer vision and machine learning.",
                 faceSystem: "Face Recognition System",
                 faceDesc: "Development of a neural network for face recognition in Python, similar to FaceID, with the ability to integrate into desktop applications.",
+                monitoringSystem: "Monitoring and Dashboards",
+                monitoringDesc: "Metrics, dashboards, and alerts setup for services: from collecting technical indicators to convenient system health tracking.",
+                myMptSystem: "MyMPT",
+                myMptDesc: "A class schedule app for students at my technical college, built together with two teammates to solve a real everyday problem. It is already used by around 70% of students, and we also put serious work into the interface, including a liquid glass effect on iPhone.",
+                gadukaGangSystem: "GADUKA GANG",
+                gadukaGangDesc: "A forum for Python developers with an integrated programming course system. The project combines community, knowledge sharing, and learning tools in a single product.",
+                autoCollectBotSystem: "AutoCollectBot",
+                autoCollectBotDesc: "A bot that scans a specific screen area and, when a target notification appears, automatically performs the actions defined in the program. In practice, it is a focused automation tool for a concrete workflow.",
+                tooLearnSystem: "TooLearn",
+                tooLearnDesc: "An Android app for learning foreign languages, focused on a clean user flow and consistent practice.",
+                freelanceRole: "Freelance: ML / automation / analytics",
+                freelanceCompany: "Project-based development",
+                freelanceDesc: "Development of applied ML/CV solutions, internal tools, automation, and dashboards for specific business needs.",
+                monitoringRole: "Database and Monitoring Engineer",
+                monitoringCompany: "Jils LLC",
+                monitoringRoleDesc: "Worked with databases, REST services, metrics, and alerts: from storage design to dashboards and stability control.",
                 moreDetails: "More Details"
             }
         };
+        translations.ru.aboutDesc = "Python-разработчик с сильным уклоном в ML, Computer Vision и прикладную аналитику. Умею доводить идеи до рабочего решения: от модели и логики обработки до API, базы данных, мониторинга и поддержки.";
+        translations.ru.parkingDesc = "Python-проект для определения свободных парковочных мест и их расположения. Здесь важны не только CV-алгоритмы, но и практическая польза: понятная логика детекции и наглядный результат.";
+        translations.ru.faceDesc = "Система распознавания лиц на Python с desktop-интерфейсом и локальной логикой авторизации. Проект показывает не только работу с CV, но и умение собрать законченное пользовательское решение.";
+        translations.en.aboutDesc = "Python developer with a strong focus on ML, computer vision, and applied analytics. I can take an idea to a working solution: from model logic to APIs, databases, monitoring, and support.";
+        translations.en.parkingDesc = "A Python project for detecting free parking spots and their position. The value here is not only CV logic, but also practical usefulness, readable detection flow, and clear output.";
+        translations.en.faceDesc = "A Python face-recognition system with a desktop interface and local authentication logic. It demonstrates both CV work and the ability to build a complete user-facing solution.";
     </script>
     <script src="script.js"></script>
 </body>
