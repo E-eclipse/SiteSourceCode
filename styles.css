@@ -1601,3 +1601,142 @@ body {
 .toggle-thumb:active .thumb-circle {
     transform: scale(0.95);
 }
+
+.profile-section,
+.case-studies-section,
+.contact-section {
+    position: relative;
+    padding: 4rem 2rem;
+}
+
+.section-kicker {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.profile-intro,
+.contact-copy,
+.availability-note,
+.experience-company,
+.experience-description {
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+}
+
+.quick-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quick-fact {
+    padding: 1rem 1.1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fact-label {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 0.45rem;
+}
+
+.fact-value {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.summary-list,
+.metrics-list {
+    margin: 1.5rem 0 0;
+    padding-left: 1.2rem;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.summary-list li,
+.metrics-list li {
+    margin-bottom: 0.7rem;
+    line-height: 1.7;
+}
+
+.action-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.secondary-link {
+    background: rgba(255, 123, 0, 0.08);
+}
+
+.experience-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.experience-card h3 {
+    font-size: 1.2rem;
+    margin: 0.4rem 0 0.5rem;
+}
+
+.experience-company {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.64);
+    margin-bottom: 0.75rem;
+}
+
+.case-grid {
+    padding-top: 0;
+}
+
+.case-card {
+    cursor: default;
+}
+
+.case-label {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.9rem;
+}
+
+.contact-section .content-card {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.availability-note {
+    margin-top: 1.25rem;
+    font-size: 0.95rem;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-section,
+    .case-studies-section,
+    .contact-section {
+        padding: 3rem 1.2rem;
+    }
+
+    .quick-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .summary-list,
+    .metrics-list {
+        padding-left: 1rem;
+    }
+}
